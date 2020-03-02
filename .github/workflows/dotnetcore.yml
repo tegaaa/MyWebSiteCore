@@ -15,3 +15,11 @@ jobs:
         dotnet-version: 3.1.102
     - name: Build with dotnet
       run: dotnet build --configuration Release
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        # Artifact name
+        name: drop
+        # Directory containing files to upload
+        path: /home/runner/work/MyWebSiteCore/MyWebSiteCore/bin/Release/netcoreapp3.1
